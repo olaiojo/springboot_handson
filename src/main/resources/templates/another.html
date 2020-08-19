@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="UTF-8">
     <title>level1another</title>
 </head>
-<body>
 
+<body>
 <h1>another page</h1>
 <p>this is another page</p>
-
+<p th:text="${msg}"></p>
 <!--    とりあえず遷移用ボタン-->
 <button onclick="location.href='http://localhost:8080/index'">goto index</button>
-<button onclick="location.href='http://localhost:8000/another'">goto another</button>
-<button onclick="location.href='http://localhost:8000/other'">goto other</button>
 
 </body>
+
 </html>

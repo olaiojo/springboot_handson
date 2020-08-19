@@ -16,11 +16,7 @@ public class level1Controller {
 
     @RequestMapping(value = "/another", method = RequestMethod.GET)
     public String another(Model model){
+        model.addAttribute("msg","this is message from controller to another page");
         return "another";
-    }
-
-    @RequestMapping(value = "/other", method = RequestMethod.GET)
-    public String other(){
-        return "other";
     }
 }
