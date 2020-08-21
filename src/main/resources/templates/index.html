@@ -10,8 +10,7 @@
 
 <body>
 <header>
-    <h1>index page</h1>
-    <p>this is index page</p>
+    <h1 th:text="${pageTitle}"></h1>
     <p th:text="${msg}"></p>
     <!--とりあえず遷移用ボタン-->
     <button onclick="location.href='http://localhost:8080/another'">goto another</button>
@@ -19,7 +18,7 @@
 
 <p><a th:text="${url}" href="http://jsonplaceholder.typicode.com/posts/1">URL</a>に対してGETリクエストを送信してみる</p>
 
-<table>
+<table border="1">
     <tr>
         <td>userID</td>
         <td><p th:text="${userId}"></p></td>

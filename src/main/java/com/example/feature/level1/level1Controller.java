@@ -24,6 +24,7 @@ public class level1Controller {
         String randomUrl = baseUrl+String.valueOf(randomId);
 
         Posts p1 = restTemplate.getForObject(randomUrl, Posts.class);
+        model.addAttribute("pageTitle","index page");
         model.addAttribute("msg", "this is message from controller");
         model.addAttribute("url",randomUrl);
         model.addAttribute("userId",p1.getUserId());
@@ -40,6 +41,7 @@ public class level1Controller {
         String randomUrl = baseUrl+String.valueOf(randomId);
 
         Posts p2 = restTemplate.getForObject(randomUrl, Posts.class);
+        model.addAttribute("pageTitle","another page");
         model.addAttribute("msg", "this is message from controller to another page");
         model.addAttribute("url",randomUrl);
         model.addAttribute("userId",p2.getUserId());
