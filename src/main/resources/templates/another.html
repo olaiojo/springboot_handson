@@ -11,12 +11,10 @@
 <body>
 <header>
     <h1 th:text="${pageTitle}"></h1>
-    <p th:text="${msg}"></p>
     <!--とりあえず遷移用ボタン-->
     <button onclick="location.href='http://localhost:8080/index'">goto index</button>
 </header>
 
-<!--<p><a th:text="${url}" href="http://jsonplaceholder.typicode.com/posts/1">URL</a>に対してGETリクエストを送信してみる</p>-->
 <p><a th:text="${url}" th:href="${url}">URL</a>に対してGETリクエストを送信してみる</p>
 
 

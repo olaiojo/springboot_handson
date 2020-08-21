@@ -8,48 +8,48 @@ public class Address {
     private Geo geo;
 
     // Constructor
-    public Address(){
+    public Address() {
     }
 
     // Getter
-    public String getStreet(){
+    public String getStreet() {
         return this.street;
     }
 
-    public String getSuite(){
+    public String getSuite() {
         return this.suite;
     }
 
-    public String getCity(){
+    public String getCity() {
         return this.city;
     }
 
-    public String getZipcode(){
+    public String getZipcode() {
         return this.zipcode;
     }
 
-    public Geo getGeo(){
+    public Geo getGeo() {
         return this.geo;
     }
 
     // Setter
-    public void setStreet(String street){
+    public void setStreet(String street) {
         this.street = street;
     }
 
-    public void setSuite(String suite){
+    public void setSuite(String suite) {
         this.suite = suite;
     }
 
-    public void setCity(String city){
+    public void setCity(String city) {
         this.city = city;
     }
 
-    public void setZipCode(String zipcode){
+    public void setZipCode(String zipcode) {
         this.zipcode = zipcode;
     }
 
-    public void setGeo(Geo geo){
+    public void setGeo(Geo geo) {
         this.geo = geo;
     }
 

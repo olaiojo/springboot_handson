@@ -14,5 +14,5 @@
     - [x] 公開APIのデータをjavaで取得する
     - [x] 取得したデータをindex.htmlページで表示する
     - [x] 表示を整える(テーブルに枠線...)
-    - [ ] anotherページで別のURLから取得して表示する
-        - [ ] Json入れ子構造をうまく取得する -> 入れ子のクラスを作成(Address, Geo, Company)
+    - [x] anotherページで別のURLから取得して表示する
+        - [x] Json入れ子構造をうまく取得する -> 入れ子のクラスを作成(Address, Geo, Company)

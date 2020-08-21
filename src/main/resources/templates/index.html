@@ -11,7 +11,6 @@
 <body>
 <header>
     <h1 th:text="${pageTitle}"></h1>
-    <p th:text="${msg}"></p>
     <!--とりあえず遷移用ボタン-->
     <button onclick="location.href='http://localhost:8080/another'">goto another</button>
 </header>
@@ -20,22 +19,22 @@
 
 <table border="1">
     <tbody>
-        <tr>
-            <td>userID</td>
-            <td><p th:text="${userId}"></p></td>
-        </tr>
-        <tr>
-            <td>id</td>
-            <td><p th:text="${id}"></p></td>
-        </tr>
-        <tr>
-            <td>title</td>
-            <td><p th:text="${title}"></p></td>
-        </tr>
-        <tr>
-            <td>body</td>
-            <td><p th:text="${body}"></p></td>
-        </tr>
+    <tr>
+        <td>userID</td>
+        <td><p th:text="${userId}"></p></td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td><p th:text="${id}"></p></td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td><p th:text="${title}"></p></td>
+    </tr>
+    <tr>
+        <td>body</td>
+        <td><p th:text="${body}"></p></td>
+    </tr>
     </tbody>
 </table>
 </body>
