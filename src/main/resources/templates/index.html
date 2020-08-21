@@ -5,20 +5,20 @@
 <head>
     <meta charset="UTF-8">
     <title>level1another</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 <header>
-    <h1>index page</h1>
-    <p>this is index page</p>
-    <p th:text="${msg}"></p>
+    <h1 th:text="${pageTitle}"></h1>
     <!--とりあえず遷移用ボタン-->
     <button onclick="location.href='http://localhost:8080/another'">goto another</button>
 </header>
 
-<p><a th:text="${url}" href="http://jsonplaceholder.typicode.com/posts/1">URL</a>に対してGETリクエストを送信してみる</p>
+<p><a th:text="${url}" th:href="${url}">URL</a>に対してGETリクエストを送信してみる</p>
 
-<table>
+<table border="1">
+    <tbody>
     <tr>
         <td>userID</td>
         <td><p th:text="${userId}"></p></td>
@@ -35,6 +35,7 @@
         <td>body</td>
         <td><p th:text="${body}"></p></td>
     </tr>
+    </tbody>
 </table>
 </body>
 

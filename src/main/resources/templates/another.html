@@ -5,37 +5,44 @@
 <head>
     <meta charset="UTF-8">
     <title>level1another</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 <header>
-    <h1>another page</h1>
-    <p>this is another page</p>
-    <p th:text="${msg}"></p>
+    <h1 th:text="${pageTitle}"></h1>
     <!--とりあえず遷移用ボタン-->
     <button onclick="location.href='http://localhost:8080/index'">goto index</button>
 </header>
 
-<p><a th:text="${url}" href="http://jsonplaceholder.typicode.com/posts/1">URL</a>に対してGETリクエストを送信してみる</p>
+<p><a th:text="${url}" th:href="${url}">URL</a>に対してGETリクエストを送信してみる</p>
 
-<table>
-    <tr>
-        <td>userID</td>
-        <td><p th:text="${userId}"></p></td>
-    </tr>
+
+<table border="1">
+    <tbody>
     <tr>
         <td>id</td>
         <td><p th:text="${id}"></p></td>
     </tr>
     <tr>
-        <td>title</td>
-        <td><p th:text="${title}"></p></td>
+        <td>name</td>
+        <td><p th:text="${name}"></p></td>
     </tr>
     <tr>
-        <td>body</td>
-        <td><p th:text="${body}"></p></td>
+        <td>username</td>
+        <td><p th:text="${userName}"></p></td>
     </tr>
+    <tr>
+        <td>lat</td>
+        <td><p th:text="${lat}"></p></td>
+    </tr>
+    <tr>
+        <td>lng</td>
+        <td><p th:text="${lng}"></p></td>
+    </tr>
+    </tbody>
 </table>
+
 </body>
 
 </html>
