@@ -4,17 +4,38 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>level1Index</title>
+    <title>level1another</title>
 </head>
 
 <body>
-<h1>index page</h1>
-<p>this is index page</p>
-<!--Controllerから値を受け取る-->
-<p th:text="${msg}"></p>
-<!--とりあえず遷移用ボタン-->
-<button onclick="location.href='http://localhost:8080/another'">goto another</button>
+<header>
+    <h1>index page</h1>
+    <p>this is index page</p>
+    <p th:text="${msg}"></p>
+    <!--とりあえず遷移用ボタン-->
+    <button onclick="location.href='http://localhost:8080/another'">goto another</button>
+</header>
 
+<p><a th:text="${url}" href="http://jsonplaceholder.typicode.com/posts/1">URL</a>に対してGETリクエストを送信してみる</p>
+
+<table>
+    <tr>
+        <td>userID</td>
+        <td><p th:text="${userId}"></p></td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td><p th:text="${id}"></p></td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td><p th:text="${title}"></p></td>
+    </tr>
+    <tr>
+        <td>body</td>
+        <td><p th:text="${body}"></p></td>
+    </tr>
+</table>
 </body>
 
 </html>
