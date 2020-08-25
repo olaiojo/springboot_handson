@@ -18,27 +18,27 @@
 <p><a th:text="${url}" th:href="${url}">URL</a>に対してGETリクエストを送信してみる</p>
 
 
-<table border="1">
+<table class="table_border">
     <tbody>
     <tr>
         <td>id</td>
-        <td><p th:text="${id}"></p></td>
+        <td><p th:text="${user.id}"></p></td>
     </tr>
     <tr>
         <td>name</td>
-        <td><p th:text="${name}"></p></td>
+        <td><p th:text="${user.name}"></p></td>
     </tr>
     <tr>
         <td>username</td>
-        <td><p th:text="${userName}"></p></td>
+        <td><p th:text="${user.username}"></p></td>
     </tr>
     <tr>
         <td>lat</td>
-        <td><p th:text="${lat}"></p></td>
+        <td><p th:text="${user.address.geo.lat}"></p></td>
     </tr>
     <tr>
         <td>lng</td>
-        <td><p th:text="${lng}"></p></td>
+        <td><p th:text="${user.address.geo.lng}"></p></td>
     </tr>
     </tbody>
 </table>

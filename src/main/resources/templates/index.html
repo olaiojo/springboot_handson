@@ -17,23 +17,23 @@
 
 <p><a th:text="${url}" th:href="${url}">URL</a>に対してGETリクエストを送信してみる</p>
 
-<table border="1">
+<table class="table_border">
     <tbody>
     <tr>
         <td>userID</td>
-        <td><p th:text="${userId}"></p></td>
+        <td><p th:text="${post.userId}"></p></td>
     </tr>
     <tr>
         <td>id</td>
-        <td><p th:text="${id}"></p></td>
+        <td><p th:text="${post.id}"></p></td>
     </tr>
     <tr>
         <td>title</td>
-        <td><p th:text="${title}"></p></td>
+        <td><p th:text="${post.title}"></p></td>
     </tr>
     <tr>
         <td>body</td>
-        <td><p th:text="${body}"></p></td>
+        <td><p th:text="${post.body}"></p></td>
     </tr>
     </tbody>
 </table>

@@ -30,10 +30,7 @@ public class Level1Controller {
         model.addAttribute("pageTitle", "index page");
         model.addAttribute("url", randomUrl);
         if (!Objects.equals(p1, null)) {
-            model.addAttribute("userId", p1.getUserId());
-            model.addAttribute("id", p1.getId());
-            model.addAttribute("title", p1.getTitle());
-            model.addAttribute("body", p1.getBody());
+            model.addAttribute("post", p1);
         }
         return "index";
     }
@@ -48,11 +45,7 @@ public class Level1Controller {
         model.addAttribute("pageTitle", "another page");
         model.addAttribute("url", randomUrl);
         if (!Objects.equals(u1, null)) {
-            model.addAttribute("id", u1.getId());
-            model.addAttribute("name", u1.getName());
-            model.addAttribute("userName", u1.getUsername());
-            model.addAttribute("lat", u1.getAddress().getGeo().getLat());
-            model.addAttribute("lng", u1.getAddress().getGeo().getLng());
+            model.addAttribute("user",u1);
         }
         return "another";
     }
