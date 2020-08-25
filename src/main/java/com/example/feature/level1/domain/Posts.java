@@ -4,7 +4,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-// http://jsonplaceholder.typicode.com/posts
+/**
+ * JSONPlaceholderのpostsをバインドするクラス
+ * @see <a href="http://jsonplaceholder.typicode.com/posts">JSONPlaceholder posts</a>
+ */
 
 @NoArgsConstructor
 @Getter

@@ -10,18 +10,38 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Objects;
 import java.util.Random;
 
+/**
+ * Level1Applicationのコントローラクラス
+ */
+
 @Controller
 public class Level1Controller {
+    /**
+     * RestTemplateオブジェクト
+     */
     private static final RestTemplate restTemplate = new RestTemplate();
-    // ベースのURL
+    /**
+     * JSONPlaceholder postsのベースURL、IDなし
+     */
     private static final String baseUrl = "http://jsonplaceholder.typicode.com/posts/";
+    /**
+     * JSONPlaceholder usersのベースURL、IDなし
+     */
     private static final String baseUrl2 = "http://jsonplaceholder.typicode.com/users/";
-    // IDのランダム変更用
+    /**
+     * URLにランダムでIDを付加する用のRandomオブジェクト
+     */
     Random random = new Random();
 
+    /**
+     * /indexにGET要求があったときの動作
+     * <a href="https://jsonplaceholder.typicode.com/posts">JSONPlaceholder posts</a>のURLに1~100までのランダムなIDを追加して1回GET、
+     * 取得したJSONのデータをビューに渡す
+     * @return "index"
+     * @see <a href="https://jsonplaceholder.typicode.com/posts">JSONPlaceholder posts</a>
+     */
     @GetMapping("/index")
     public String index(Model model) {
-        //ランダムなpost IDをURLに付加
         int randomId = 1 + random.nextInt(100); // 1~100
         String randomUrl = baseUrl + randomId;
 
@@ -34,9 +54,15 @@ public class Level1Controller {
         return "index";
     }
 
+    /**
+     * /anotherにGET要求があったときの動作
+     * <a href="https://jsonplaceholder.typicode.com/users">JSONPlaceholder users</a>のURLに1~10までのランダムなIDを追加して1回GET、
+     * 取得したJSONのデータをビューに渡す
+     * @return "index"
+     * @see <a href="https://jsonplaceholder.typicode.com/users">JSONPlaceholder users</a>
+     */
     @GetMapping("/another")
     public String another(Model model) {
-        //ランダムなIDをURLに付加
         int randomId = 1 + random.nextInt(10); // 1~10
         String randomUrl = baseUrl2 + randomId;
 

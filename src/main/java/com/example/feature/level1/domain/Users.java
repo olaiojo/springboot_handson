@@ -1,11 +1,14 @@
 package com.example.feature.level1.domain;
 
-//https://jsonplaceholder.typicode.com/users
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+/**
+ * JSONPlaceholderのUsersをバインドするクラス
+ * @see <a href="https://jsonplaceholder.typicode.com/users">JSONPlaceholder users</a>
+ */
 
 @Getter
 @NoArgsConstructor
