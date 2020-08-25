@@ -2,6 +2,13 @@ package com.example.feature.level1.domain;
 
 //https://jsonplaceholder.typicode.com/users
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@NoArgsConstructor
+@Setter
 public class Users {
     private Integer id;
     private String name;
@@ -11,75 +18,4 @@ public class Users {
     private String phone;
     private String website;
     private Company company;
-
-    // Constructor
-    public Users() {
-    }
-
-    // Getter
-    public int getId() {
-        return this.id;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public String getUsername() {
-        return this.username;
-    }
-
-    public String getEmail() {
-        return this.email;
-    }
-
-    public Address getAddress() {
-        return this.address;
-    }
-
-    public String getPhone() {
-        return this.phone;
-    }
-
-    public String getWebsite() {
-        return this.website;
-    }
-
-    public Company getCompany() {
-        return this.company;
-    }
-
-    // Setter
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public void setWebsite(String website) {
-        this.website = website;
-    }
-
-    public void setCompany(Company company) {
-        this.company = company;
-    }
-
 }
