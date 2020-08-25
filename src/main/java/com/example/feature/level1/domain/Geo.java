@@ -1,4 +1,4 @@
-package com.example.feature.level1;
+package com.example.feature.level1.domain;
 
 public class Geo {
     private float lat;

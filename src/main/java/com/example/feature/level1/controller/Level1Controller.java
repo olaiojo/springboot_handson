@@ -1,5 +1,7 @@
-package com.example.feature.level1;
+package com.example.feature.level1.controller;
 
+import com.example.feature.level1.domain.Posts;
+import com.example.feature.level1.domain.Users;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
@@ -9,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Random;
 
 @Controller
-public class level1Controller {
+public class Level1Controller {
     private static final RestTemplate restTemplate = new RestTemplate();
     // ベースのURL
     private static final String baseUrl = "http://jsonplaceholder.typicode.com/posts/";
