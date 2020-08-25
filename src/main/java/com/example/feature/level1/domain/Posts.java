@@ -3,8 +3,8 @@ package com.example.feature.level1.domain;
 // http://jsonplaceholder.typicode.com/posts
 
 public class Posts {
-    private int userId;
-    private int id;
+    private Integer userId;
+    private Integer id;
     private String title;
     private String body;
 

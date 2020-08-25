@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Random;
+import java.util.Objects;
 
 @Controller
 public class Level1Controller {
@@ -28,10 +29,12 @@ public class Level1Controller {
         Posts p1 = restTemplate.getForObject(randomUrl, Posts.class);
         model.addAttribute("pageTitle", "index page");
         model.addAttribute("url", randomUrl);
-        model.addAttribute("userId", p1.getUserId()); //TODO may produce NullPointerException
-        model.addAttribute("id", p1.getId());
-        model.addAttribute("title", p1.getTitle());
-        model.addAttribute("body", p1.getBody());
+        if (!Objects.equals(p1, null)) {
+            model.addAttribute("userId", p1.getUserId());
+            model.addAttribute("id", p1.getId());
+            model.addAttribute("title", p1.getTitle());
+            model.addAttribute("body", p1.getBody());
+        }
         return "index";
     }
 
@@ -44,11 +47,13 @@ public class Level1Controller {
         Users u1 = restTemplate.getForObject(randomUrl, Users.class);
         model.addAttribute("pageTitle", "another page");
         model.addAttribute("url", randomUrl);
-        model.addAttribute("id", u1.getId()); //TODO it may produce NullPointerException
-        model.addAttribute("name", u1.getName());
-        model.addAttribute("userName", u1.getUsername());
-        model.addAttribute("lat", u1.getAddress().getGeo().getLat());
-        model.addAttribute("lng", u1.getAddress().getGeo().getLng());
+        if (!Objects.equals(u1, null)) {
+            model.addAttribute("id", u1.getId());
+            model.addAttribute("name", u1.getName());
+            model.addAttribute("userName", u1.getUsername());
+            model.addAttribute("lat", u1.getAddress().getGeo().getLat());
+            model.addAttribute("lng", u1.getAddress().getGeo().getLng());
+        }
         return "another";
     }
 }

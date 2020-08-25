@@ -3,7 +3,7 @@ package com.example.feature.level1.domain;
 //https://jsonplaceholder.typicode.com/users
 
 public class Users {
-    private int id;
+    private Integer id;
     private String name;
     private String username; //userNameだと値が取れない
     private String email;
