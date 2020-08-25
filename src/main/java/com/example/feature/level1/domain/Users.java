@@ -2,6 +2,7 @@ package com.example.feature.level1.domain;
 
 //https://jsonplaceholder.typicode.com/users
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,7 +13,8 @@ import lombok.Setter;
 public class Users {
     private Integer id;
     private String name;
-    private String username; //userNameだと値が取れない
+    @JsonProperty("username") //JsonPropertyで命名規則を変更してみる(username->userName)
+    private String userName;
     private String email;
     private Address address;
     private String phone;
