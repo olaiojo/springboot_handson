@@ -3,13 +3,12 @@ package com.example.feature.level1.controller;
 import com.example.feature.level1.domain.Posts;
 import com.example.feature.level1.domain.Users;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.Random;
 import java.util.Objects;
+import java.util.Random;
 
 @Controller
 public class Level1Controller {
@@ -20,7 +19,7 @@ public class Level1Controller {
     // IDのランダム変更用
     Random random = new Random();
 
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
+    @GetMapping("/index")
     public String index(Model model) {
         //ランダムなpost IDをURLに付加
         int randomId = 1 + random.nextInt(100); // 1~100
@@ -35,7 +34,7 @@ public class Level1Controller {
         return "index";
     }
 
-    @RequestMapping(value = "/another", method = RequestMethod.GET)
+    @GetMapping("/another")
     public String another(Model model) {
         //ランダムなIDをURLに付加
         int randomId = 1 + random.nextInt(10); // 1~10
