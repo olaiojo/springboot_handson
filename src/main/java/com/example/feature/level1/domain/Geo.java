@@ -13,6 +13,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @Setter
 public class Geo {
-    private float lat;
-    private float lng;
+    private Double lat;
+    private Double lng;
 }
