@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>level1another</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header>
+    <h1 th:text="${pageTitle}"></h1>
+    <!--とりあえず遷移用ボタン-->
+    <button onclick="location.href='http://localhost:8080/index'">goto index</button>
+</header>
+
+<p><a th:text="${url}" th:href="${url}">URL</a>に対してGETリクエストを送信してみる</p>
+
+
+<table class="table_border">
+    <tbody>
+    <tr>
+        <td>id</td>
+        <td><p th:text="${user.id}"></p></td>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td><p th:text="${user.name}"></p></td>
+    </tr>
+    <tr>
+        <td>username</td>
+        <td><p th:text="${user.userName}"></p></td>
+    </tr>
+    <tr>
+        <td>lat</td>
+        <td><p th:text="${user.address.geo.lat}"></p></td>
+    </tr>
+    <tr>
+        <td>lng</td>
+        <td><p th:text="${user.address.geo.lng}"></p></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>
