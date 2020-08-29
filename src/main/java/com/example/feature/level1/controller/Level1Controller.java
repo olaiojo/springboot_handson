@@ -23,11 +23,11 @@ public class Level1Controller {
     /**
      * JSONPlaceholder postsのベースURL、IDなし
      */
-    private static final String baseUrl = "http://jsonplaceholder.typicode.com/posts/";
+    private static final String BASE_URL = "http://jsonplaceholder.typicode.com/posts/";
     /**
      * JSONPlaceholder usersのベースURL、IDなし
      */
-    private static final String baseUrl2 = "http://jsonplaceholder.typicode.com/users/";
+    private static final String BASE_URL_2 = "http://jsonplaceholder.typicode.com/users/";
     /**
      * URLにランダムでIDを付加する用のRandomオブジェクト
      */
@@ -42,14 +42,14 @@ public class Level1Controller {
      */
     @GetMapping("/index")
     public String index(Model model) {
-        int randomId = 1 + random.nextInt(100); // 1~100
-        String randomUrl = baseUrl + randomId;
+        final int RANDOM_ID = 1 + random.nextInt(100); // 1~100
+        final String RANDOM_URL = BASE_URL + RANDOM_ID;
 
-        Posts p1 = restTemplate.getForObject(randomUrl, Posts.class);
+        final Posts P1 = restTemplate.getForObject(RANDOM_URL, Posts.class);
         model.addAttribute("pageTitle", "index page");
-        model.addAttribute("url", randomUrl);
-        if (!Objects.equals(p1, null)) {
-            model.addAttribute("post", p1);
+        model.addAttribute("url", RANDOM_URL);
+        if (Objects.nonNull(P1)){
+            model.addAttribute("post",P1);
         }
         return "index";
     }
@@ -63,14 +63,14 @@ public class Level1Controller {
      */
     @GetMapping("/another")
     public String another(Model model) {
-        int randomId = 1 + random.nextInt(10); // 1~10
-        String randomUrl = baseUrl2 + randomId;
+        final int RANDOM_ID = 1 + random.nextInt(10); // 1~10
+        String RANDOM_URL = BASE_URL_2 + RANDOM_ID;
 
-        Users u1 = restTemplate.getForObject(randomUrl, Users.class);
+        final Users U1 = restTemplate.getForObject(RANDOM_URL, Users.class);
         model.addAttribute("pageTitle", "another page");
-        model.addAttribute("url", randomUrl);
-        if (!Objects.equals(u1, null)) {
-            model.addAttribute("user",u1);
+        model.addAttribute("url", RANDOM_URL);
+        if (Objects.nonNull(U1)) {
+            model.addAttribute("user",U1);
         }
         return "another";
     }
