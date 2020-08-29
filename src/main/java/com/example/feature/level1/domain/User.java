@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @Setter
-public class Users {
+public class User {
     private Integer id;
     private String name;
     @JsonProperty("username") //JsonPropertyで命名規則を変更してみる(username->userName)

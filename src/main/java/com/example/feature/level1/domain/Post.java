@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Posts {
+public class Post {
     private Integer userId;
     private Integer id;
     private String title;

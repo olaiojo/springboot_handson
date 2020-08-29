@@ -1,7 +1,7 @@
 package com.example.feature.level1.controller;
 
-import com.example.feature.level1.domain.Posts;
-import com.example.feature.level1.domain.Users;
+import com.example.feature.level1.domain.Post;
+import com.example.feature.level1.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,7 +45,7 @@ public class Level1Controller {
         final int RANDOM_ID = 1 + random.nextInt(100); // 1~100
         final String RANDOM_URL = BASE_URL + RANDOM_ID;
 
-        final Posts P1 = restTemplate.getForObject(RANDOM_URL, Posts.class);
+        final Post P1 = restTemplate.getForObject(RANDOM_URL, Post.class);
         model.addAttribute("pageTitle", "index page");
         model.addAttribute("url", RANDOM_URL);
         if (Objects.nonNull(P1)){
@@ -66,7 +66,7 @@ public class Level1Controller {
         final int RANDOM_ID = 1 + random.nextInt(10); // 1~10
         String RANDOM_URL = BASE_URL_2 + RANDOM_ID;
 
-        final Users U1 = restTemplate.getForObject(RANDOM_URL, Users.class);
+        final User U1 = restTemplate.getForObject(RANDOM_URL, User.class);
         model.addAttribute("pageTitle", "another page");
         model.addAttribute("url", RANDOM_URL);
         if (Objects.nonNull(U1)) {
