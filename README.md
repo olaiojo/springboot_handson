@@ -32,3 +32,7 @@
     - [x] index, other以外はすべて404
 - [ ] 他のAPIを使ってみる
     - [ ] POSTメソッド
+
+### outputs
+
+<img width="1652" alt="SS 2020-09-02 14 33 12" src="https://user-images.githubusercontent.com/25107943/91935740-5d1f5d00-ed29-11ea-804d-edcbe8f69bd3.png">
