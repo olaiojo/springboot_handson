@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--Javascriptの読み込み、staticが起点-->
+    <script type="text/javascript" th:src="@{/js/asynchronousPro.js}"></script>
+</head>
+
+<body>
+<header>
+    <h1>Other page</h1>
+    <h2>Asynchronous processing with Javascript (without thymeleaf)</h2>
+</header>
+    <input type="button" value="js呼び出し" onclick="jsTest();"/>
+
+</body>
+</html>
