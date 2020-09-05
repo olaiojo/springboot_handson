@@ -1,6 +1,7 @@
 package com.example.feature.level1.controller;
 
 import com.example.feature.level1.domain.Post;
+import com.example.feature.level1.domain.PostRequestResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,11 +26,12 @@ public class Level2Controller {
         final String TITLE = "sample title";
         final String BODY = "sample body";
 
-        //Post型のrequestに送信データを格納
-        final Post request = new Post();
-        request.setUserId(USER_ID);
-        request.setTitle(TITLE);
-        request.setBody(BODY);
+        //Builderを使用してPoseRequestResourceオブジェクトを生成
+        final PostRequestResource request = PostRequestResource.builder()
+                .userId(USER_ID)
+                .title(TITLE)
+                .body(BODY)
+                .build();
 
         //requestをPOSTし、返却されたResponseBodyをPostクラスにバインド、Post型のresponseに格納
         final Post response = restTemplate.postForObject(URL, request, Post.class);

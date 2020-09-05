@@ -48,8 +48,8 @@ public class Level1Controller {
         final Post P1 = restTemplate.getForObject(RANDOM_URL, Post.class);
         model.addAttribute("pageTitle", "index page");
         model.addAttribute("url", RANDOM_URL);
-        if (Objects.nonNull(P1)){
-            model.addAttribute("post",P1);
+        if (Objects.nonNull(P1)) {
+            model.addAttribute("post", P1);
         }
         return "index";
     }
@@ -70,7 +70,7 @@ public class Level1Controller {
         model.addAttribute("pageTitle", "another page");
         model.addAttribute("url", RANDOM_URL);
         if (Objects.nonNull(U1)) {
-            model.addAttribute("user",U1);
+            model.addAttribute("user", U1);
         }
         return "another";
     }
