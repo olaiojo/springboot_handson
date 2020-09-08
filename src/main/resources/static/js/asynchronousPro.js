@@ -17,7 +17,7 @@ function getAPIData() {
     request.responseType = 'json';
     request.onload = function () {
         const data = this.response;
-        console.log(data);
+        setDataToView(data['userId'], data['id'], data['title'], data['body']);
     }
     request.send();
 }
