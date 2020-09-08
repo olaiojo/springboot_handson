@@ -41,11 +41,14 @@
 ## feature/level3
 
 ### TODOs
+
 - [x] Javascriptを利用する
     - [x] jsファイルを作成する
     - [x] 作成したjsファイルをother.htmlページで読み込む
-- [ ] Javascriptを使ってAPIのデータを取得する
-    - [ ] Javascriptを利用してAPIデータを取得する
-    - [ ] JavascriptでDOMの要素を書き換えて取得したデータを表示する
+- [x] Javascriptを使ってAPIのデータを取得する
+    - [x] Javascriptを利用してAPIデータを取得する
+    - [x] JavascriptでDOMの要素を書き換えて取得したデータを表示する
 
 ### outputs
+
+<img width="1347" alt="スクリーンショット 2020-09-09 4 30 38" src="https://user-images.githubusercontent.com/25107943/92519647-3eebbc80-f255-11ea-93d6-c6b82af5b8fa.png">
