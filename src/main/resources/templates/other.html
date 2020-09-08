@@ -3,16 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>level3other</title>
     <!--Javascriptの読み込み、staticが起点-->
     <script type="text/javascript" th:src="@{/js/asynchronousPro.js}"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
 </head>
 
 <body onload="getAPIData();">
 <header>
     <h1>Other page</h1>
     <h2>Asynchronous processing with Javascript (without thymeleaf)</h2>
+    <!--とりあえず遷移用ボタン-->
+    <button onclick="location.href='http://localhost:8080/index'">goto index</button>
+    <button onclick="location.href='http://localhost:8080/another'">goto another</button>
+    <button onclick="location.href='http://localhost:8080/post'">goto post</button>
+    <button onclick="location.href='http://localhost:8080.other'">goto other</button>
 </header>
-    <input type="button" value="js呼び出し" onclick="getAPIData();"/>
+
+<table class="table_border">
+    <tbody>
+    <tr>
+        <td>userID</td>
+        <td><p id="userId"></p></td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td><p id="id"></p></td>
+    </tr>
+    <tr>
+        <td>title</td>
+        <td><p id="title"></p></td>
+    </tr>
+    <tr>
+        <td>body</td>
+        <td><p id="body"></p></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
