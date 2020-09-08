@@ -23,3 +23,17 @@
 
 <img width="1351" alt="SS 2020-08-21 at 14 55 46" src="https://user-images.githubusercontent.com/25107943/90857933-2019a900-e3c0-11ea-8221-6b821a3b0715.png">
 <img width="1351" alt="SS 2020-08-21 at 14 55 50" src="https://user-images.githubusercontent.com/25107943/90857985-39225a00-e3c0-11ea-9601-45c840fc36f6.png">
+
+## feature/level2
+
+### TODOs
+
+- [x] エラーページ実装
+    - [x] index, other以外はすべて404
+- [ ] 他のAPIを使ってみる
+    - [ ] POSTメソッド
+
+### outputs
+
+<img width="1652" alt="SS 2020-09-02 14 33 12" src="https://user-images.githubusercontent.com/25107943/91935740-5d1f5d00-ed29-11ea-804d-edcbe8f69bd3.png">
+<img width="1552" alt="スクリーンショット 2020-09-03 13 19 53" src="https://user-images.githubusercontent.com/25107943/92070870-34aa6800-ede8-11ea-8c90-0a0c3e2419cd.png">

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <title>404 Not Found</title>
+    <link th:href="@{/css/errorpage.css}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="error-message">
+    <h1>Error!</h1>
+</div>
+<div class="error-description">
+    <h1 th:text="${errorDescription}">Description</h1>
+    <h2>こちらは自作エラーページです</h2>
+</div>
+</body>
+</html>
