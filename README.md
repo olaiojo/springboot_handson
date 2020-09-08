@@ -37,3 +37,15 @@
 
 <img width="1652" alt="SS 2020-09-02 14 33 12" src="https://user-images.githubusercontent.com/25107943/91935740-5d1f5d00-ed29-11ea-804d-edcbe8f69bd3.png">
 <img width="1552" alt="スクリーンショット 2020-09-03 13 19 53" src="https://user-images.githubusercontent.com/25107943/92070870-34aa6800-ede8-11ea-8c90-0a0c3e2419cd.png">
+
+## feature/level3
+
+### TODOs
+- [x] Javascriptを利用する
+    - [x] jsファイルを作成する
+    - [x] 作成したjsファイルをother.htmlページで読み込む
+- [ ] Javascriptを使ってAPIのデータを取得する
+    - [ ] Javascriptを利用してAPIデータを取得する
+    - [ ] JavascriptでDOMの要素を書き換えて取得したデータを表示する
+
+### outputs
