@@ -15,8 +15,8 @@ function createRandomNumber(max){
 
 /**
  * other.htmlの該当id部分を引数の値で書き換える関数
- * @param {number} userId ユーザID
- * @param {number} id ID
+ * @param {string} userId ユーザID
+ * @param {string} id ID
  * @param {string} title タイトル
  * @param {string} body 本文
  */
