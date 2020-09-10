@@ -9,7 +9,7 @@
     <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
 </head>
 
-<body onload="getAPIData();">
+<body>
 <header>
     <h1>Other page</h1>
     <h2>Asynchronous processing with Javascript (without thymeleaf)</h2>
@@ -19,6 +19,8 @@
     <button onclick="location.href='http://localhost:8080/post'">goto post</button>
     <button onclick="location.href='http://localhost:8080/other'">goto other</button>
 </header>
+
+<button onclick="getAPIData()" class="bg_lightpink">JavascriptでAPIからデータを取得する</button>
 
 <table class="table_border">
     <tbody>
