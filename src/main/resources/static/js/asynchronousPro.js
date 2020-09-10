@@ -9,7 +9,7 @@ const BASE_URL = 'https://jsonplaceholder.typicode.com/posts/';
  * @param {number} max ランダムな整数の最大値を指定
  * @returns {number}
  */
-function createRandomNumber(max){
+function createRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
 
@@ -21,10 +21,10 @@ function createRandomNumber(max){
  * @param {string} body 本文
  */
 function setDataToView(userId, id, title, body) {
-    document.getElementById('userId').innerHTML = userId;
-    document.getElementById('id').innerHTML = id;
-    document.getElementById('title').innerHTML = title;
-    document.getElementById('body').innerHTML = body;
+    document.getElementById('userId').textContent = userId;
+    document.getElementById('id').textContent = id;
+    document.getElementById('title').textContent = title;
+    document.getElementById('body').textContent = body;
 }
 
 /**
