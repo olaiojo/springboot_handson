@@ -1,5 +1,9 @@
-.table_border,.table_border td,.table_border th{
-    width:50%;
+.table_border, .table_border td, .table_border th {
+    width: 50%;
     border: solid 1px #000000;
     border-collapse: separate;
+}
+
+.bg_lightpink {
+    background: lightpink;
 }
