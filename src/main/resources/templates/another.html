@@ -7,36 +7,38 @@
 </head>
 
 <body>
-<div th:replace="common :: header_fragment"></div>
+<div th:replace="common :: navbar_fragment"></div>
 
-<p><a th:text="${url}" th:href="${url}">URL</a>に対してGETリクエストを送信してみる</p>
+<div class="container">
 
+    <p><a th:text="${url}" th:href="${url}">URL</a>に対してGETリクエストを送信してみる</p>
 
-<table class="table_border">
-    <tbody>
-    <tr>
-        <td>id</td>
-        <td><p th:text="${user.id}"></p></td>
-    </tr>
-    <tr>
-        <td>name</td>
-        <td><p th:text="${user.name}"></p></td>
-    </tr>
-    <tr>
-        <td>username</td>
-        <td><p th:text="${user.userName}"></p></td>
-    </tr>
-    <tr>
-        <td>lat</td>
-        <td><p th:text="${user.address.geo.lat}"></p></td>
-    </tr>
-    <tr>
-        <td>lng</td>
-        <td><p th:text="${user.address.geo.lng}"></p></td>
-    </tr>
-    </tbody>
-</table>
+    <table class="table_border">
+        <tbody>
+        <tr>
+            <td>id</td>
+            <td><p th:text="${user.id}"></p></td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td><p th:text="${user.name}"></p></td>
+        </tr>
+        <tr>
+            <td>username</td>
+            <td><p th:text="${user.userName}"></p></td>
+        </tr>
+        <tr>
+            <td>lat</td>
+            <td><p th:text="${user.address.geo.lat}"></p></td>
+        </tr>
+        <tr>
+            <td>lng</td>
+            <td><p th:text="${user.address.geo.lng}"></p></td>
+        </tr>
+        </tbody>
+    </table>
 
+</div>
 </body>
 
 </html>
