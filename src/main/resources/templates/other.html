@@ -9,29 +9,31 @@
 
 <body>
 
-<div th:replace="common :: header_fragment"></div>
+<div th:replace="common :: navbar_fragment"></div>
 
-<button onclick="getAPIData()" class="bg_lightpink">JavascriptでAPIからデータを取得する</button>
+<div class="container">
+    <button onclick="getAPIData()" class="btn btn-primary btn-xl rounded-pill mt-3">JavascriptでAPIからデータを取得する</button>
 
-<table class="table_border">
-    <tbody>
-    <tr>
-        <td>userID</td>
-        <td><p id="userId"></p></td>
-    </tr>
-    <tr>
-        <td>id</td>
-        <td><p id="id"></p></td>
-    </tr>
-    <tr>
-        <td>title</td>
-        <td><p id="title"></p></td>
-    </tr>
-    <tr>
-        <td>body</td>
-        <td><p id="body"></p></td>
-    </tr>
-    </tbody>
-</table>
+    <table class="table_border mt-3">
+        <tbody>
+        <tr>
+            <td>userID</td>
+            <td><p id="userId"></p></td>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td><p id="id"></p></td>
+        </tr>
+        <tr>
+            <td>title</td>
+            <td><p id="title"></p></td>
+        </tr>
+        <tr>
+            <td>body</td>
+            <td><p id="body"></p></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

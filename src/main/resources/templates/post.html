@@ -7,30 +7,33 @@
 </head>
 
 <body>
-<div th:replace="common :: header_fragment"></div>
+<div th:replace="common :: navbar_fragment"></div>
 
-<p><a th:text="${url}" th:href="${url}">URL</a>に対してPOSTリクエストを送信してみる</p>
+<div class="container">
 
-<table class="table_border">
-    <tbody>
-    <tr>
-        <td>userID</td>
-        <td><p th:text="${response.userId}"></p></td>
-    </tr>
-    <tr>
-        <td>id</td>
-        <td><p th:text="${response.id}"></p></td>
-    </tr>
-    <tr>
-        <td>title</td>
-        <td><p th:text="${response.title}"></p></td>
-    </tr>
-    <tr>
-        <td>body</td>
-        <td><p th:text="${response.body}"></p></td>
-    </tr>
-    </tbody>
+    <p><a th:text="${url}" th:href="${url}">URL</a>に対してPOSTリクエストを送信してみる</p>
+
+    <table class="table_border">
+        <tbody>
+        <tr>
+            <td>userID</td>
+            <td><p th:text="${response.userId}"></p></td>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td><p th:text="${response.id}"></p></td>
+        </tr>
+        <tr>
+            <td>title</td>
+            <td><p th:text="${response.title}"></p></td>
+        </tr>
+        <tr>
+            <td>body</td>
+            <td><p th:text="${response.body}"></p></td>
+        </tr>
+        </tbody>
 </table>
+</div>
 </body>
 
 </html>
