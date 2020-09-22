@@ -1,12 +1,10 @@
 <!DOCTYPE html>
+
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
-<head>
-    <meta charset="UTF-8">
-    <title>level3other</title>
-    <!--Javascriptの読み込み、staticが起点-->
+<head th:replace="common :: head_fragment(title='level3other', links = ~{::link}, scripts=~{::script})">
+    <title>title</title>
     <script type="text/javascript" th:src="@{/js/asynchronousPro.js}"></script>
-    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
 </head>
 
 <body>
