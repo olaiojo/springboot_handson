@@ -2,21 +2,13 @@
 
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
-<head>
-    <meta charset="UTF-8">
-    <title>level1another</title>
-    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+<head th:replace="common :: head_fragment(title='level1index', links = ~{::link}, scripts = ~{::script})">
+    <title>title</title>
 </head>
 
 <body>
-<header>
-    <h1 th:text="${pageTitle}"></h1>
-    <!--とりあえず遷移用ボタン-->
-    <button onclick="location.href='http://localhost:8080/index'">goto index</button>
-    <button onclick="location.href='http://localhost:8080/another'">goto another</button>
-    <button onclick="location.href='http://localhost:8080/post'">goto post</button>
-    <button onclick="location.href='http://localhost:8080/other'">goto other</button>
-</header>
+<!-- commonよりheader呼び出し -->
+<div th:replace="common :: header_fragment"></div>
 
 <p><a th:text="${url}" th:href="${url}">URL</a>に対してGETリクエストを送信してみる</p>
 

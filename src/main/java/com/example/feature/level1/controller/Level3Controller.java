@@ -1,6 +1,7 @@
 package com.example.feature.level1.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
@@ -10,7 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class Level3Controller {
 
     @GetMapping("/other")
-    public String other(){
+    public String other(Model model){
+        model.addAttribute("pageTitle", "other page");
         return "other";
     }
 }
