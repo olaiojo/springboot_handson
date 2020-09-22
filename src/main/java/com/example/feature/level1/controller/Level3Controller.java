@@ -12,7 +12,7 @@ public class Level3Controller {
 
     @GetMapping("/other")
     public String other(Model model){
-        model.addAttribute("pageTitle", "Other page");
+        model.addAttribute("pageTitle", "other page");
         return "other";
     }
 }
