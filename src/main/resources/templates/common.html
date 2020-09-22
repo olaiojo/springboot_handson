@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:fragment="head_fragment(title, links)">
+    <meta charset="UTF-8">
+    <!-- title  -->
+    <title th:text="${title}"></title>
+    <!-- 共通css  -->
+    <link th:href="@{/css/style.css}" rel="stylesheet" type="text/css">
+    <!-- 各viewでの読み込み、なければ何もしない -->
+    <th:block th:replace="${links} ?: _"></th:block>
+    <th:block th:replace="${scripts} ?: _"></th:block>
+</head>
+
+<body>
+<header th:fragment="header_fragment">
+    <h1 th:text="${pageTitle}"></h1>
+    <!--とりあえず遷移用ボタン-->
+    <button onclick="location.href='http://localhost:8080/index'">goto index</button>
+    <button onclick="location.href='http://localhost:8080/another'">goto another</button>
+    <button onclick="location.href='http://localhost:8080/post'">goto post</button>
+    <button onclick="location.href='http://localhost:8080/other'">goto other</button>
+</header>
+</body>
+
+</html>
